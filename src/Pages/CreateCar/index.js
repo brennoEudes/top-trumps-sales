@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { api } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
+import Button from "../../Components/Button";
+import { Link } from "react-router-dom";
 
 export function CreateCar() {
   const [sale, setSale] = useState({
@@ -37,6 +39,10 @@ export function CreateCar() {
   console.log(sale);
   return (
     <>
+      <Link to="/">
+        <Button text="Home" />
+      </Link>
+
       <h1>Criar um novo card de vendas</h1>
 
       <form onSubmit={handleSubmit}>

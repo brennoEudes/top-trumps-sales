@@ -1,6 +1,8 @@
 import Card from "../../Components/Card";
+import Button from "../../Components/Button";
 import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export function Home() {
   const [sales, setSales] = useState([]);
@@ -19,7 +21,9 @@ export function Home() {
 
   return (
     <>
-      <h1>Top Trumps Sales</h1>
+      <Link to="/sales">
+        <Button text="Advertise My Car" />
+      </Link>
 
       {sales.map((currentSale) => {
         return (
