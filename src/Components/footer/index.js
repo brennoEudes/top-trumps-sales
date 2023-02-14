@@ -1,3 +1,3 @@
 export function Footer() {
-  return <footer>Desenvolvido na IronHack projeto </footer>;
+  return <footer> © Developed by Brenno Eudes and Pedro Barbosa at IronHack!</footer>;
 }
