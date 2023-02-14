@@ -22,6 +22,7 @@ export function Home() {
 
   return (
     <>
+
       <h1>Vendas</h1>
       <div>
         <Link to="/sales">
@@ -37,6 +38,8 @@ export function Home() {
           </>
         );
       })}
+
+  
     </>
   );
 }
