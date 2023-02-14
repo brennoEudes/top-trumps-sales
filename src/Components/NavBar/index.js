@@ -1,7 +1,11 @@
+import Button from "../Button";
 
-function NavBar () {
-
-    return <button>Advertise My Car</button>;
+function NavBar() {
+  return (
+    <>
+     <Button text="Advertise My Car" />
+    </>
+  );
 }
 
 export default NavBar;
