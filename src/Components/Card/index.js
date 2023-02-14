@@ -7,7 +7,7 @@ function Card (props) {
 
   return (
     <>
-      <div className="card-box">
+      <div>
         <img id={key} src={carPhoto} alt="car-icon" />
         <h2>{carName}</h2>
 

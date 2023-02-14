@@ -43,7 +43,7 @@ export function CreateCar() {
         <Button text="Home" />
       </Link>
 
-      <h1>Criar um novo card de vendas</h1>
+      <h1>Create your car</h1>
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="input-sale-name">Car name</label>
@@ -114,7 +114,7 @@ export function CreateCar() {
           onChange={handleChange}
         />
 
-        <button>criar</button>
+        <button>Publish My Car</button>
       </form>
     </>
   );
