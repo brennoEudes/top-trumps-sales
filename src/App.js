@@ -1,14 +1,19 @@
 import NavBar from "./Components/NavBar";
 import { Footer } from "./Components/footer";
-import Card from "./Components/Card";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./Pages/Home";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <NavBar />
-      <Card />
+
       <Footer />
-    </div>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   );
 }
 
