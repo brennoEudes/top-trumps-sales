@@ -1,6 +1,6 @@
 import NavBar from "../../Components/NavBar";
 
-function Home() {
+export function Home() {
   return (
     <>
       <NavBar />
