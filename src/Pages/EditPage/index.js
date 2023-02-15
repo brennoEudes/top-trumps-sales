@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
-import { useNavigate } from "react-router-dom";
-import Button from "../../Components/Button";
-import { Link } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import Button from "../../Components/Button/index";
 
-export function CreateCar() {
+export function EditPage() {
   const [sale, setSale] = useState({
     name: "",
     image: "",
@@ -12,39 +11,53 @@ export function CreateCar() {
     price: 0,
     fipe: 0,
     brand: "",
-    year: 0,
+    year: "",
     fuel: "",
     aceleration: 0,
   });
 
+  useEffect(() => {
+    async function fetchSale() {
+      try {
+        const response = await api.get(`/sales/${params.editId}`);
+        console.log(response);
+
+        setSale(response.data.data.attributes);
+      } catch (err) {
+        // console.log(err);
+      }
+    }
+
+    fetchSale();
+  }, []);
+
   const navigate = useNavigate();
+  const params = useParams();
 
   function handleChange(e) {
-    console.log(e.target);
+    //console.log(e.target)
     setSale({ ...sale, [e.target.name]: e.target.value });
-    console.log(sale);
+    //console.log(sale)
   }
-
   async function handleSubmit(e) {
     try {
       e.preventDefault();
       let obj = { data: { ...sale } };
 
-      await api.post("/sales", obj);
+      await api.put(`/sales/${params.editId}`, obj);
 
       navigate("/"); // navegar para a home
     } catch (err) {
       console.log(err);
     }
   }
-  console.log(sale);
   return (
     <>
       <Link to="/">
         <Button text="Home" />
       </Link>
 
-      <h1>Create your car</h1>
+      <h1>Editar Anúncio</h1>
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="input-sale-name">Car name</label>
@@ -115,7 +128,7 @@ export function CreateCar() {
           onChange={handleChange}
         />
 
-        <button>Publish My Car</button>
+        <button>Editar</button>
       </form>
     </>
   );

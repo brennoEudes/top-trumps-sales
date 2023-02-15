@@ -27,11 +27,14 @@ export function Home() {
 
       {sales.map((currentSale) => {
         return (
-          <Card
-            key={currentSale.id}
-            carPhoto={currentSale.attributes.image}
-            carName={currentSale.attributes.name}
-          />
+          <>
+            <Card
+              key={currentSale.id}
+              carPhoto={currentSale.attributes.image}
+              carName={currentSale.attributes.name}
+              carLink={currentSale.id}
+            />
+          </>
         );
       })}
     </>
