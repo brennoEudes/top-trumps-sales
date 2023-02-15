@@ -1,9 +1,8 @@
 import Button from "../Button";
 import { Link } from "react-router-dom";
 
-function Card (props) {
-
-  const {key, carPhoto, carName} = props;
+function Card(props) {
+  const { key, carPhoto, carName, carLink } = props;
 
   return (
     <>
@@ -11,8 +10,8 @@ function Card (props) {
         <img id={key} src={carPhoto} alt="car-icon" />
         <h2>{carName}</h2>
 
-        <Link to="/">
-        <Button text="Learn More"/>
+        <Link to={`/detail/${carLink}`}>
+          <Button text="Learn More" />
         </Link>
       </div>
     </>
