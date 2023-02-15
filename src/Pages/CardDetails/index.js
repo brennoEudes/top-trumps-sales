@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { api } from "../../utils/api";
 
 export function CarDetail() {
   const params = useParams();
+  const navigate = useNavigate();
   const [detail, setDetail] = useState({});
 
   useEffect(() => {
@@ -18,6 +19,17 @@ export function CarDetail() {
     }
     fetchDetail();
   }, []);
+
+async function handleDelete () {
+    try {
+      const response = await api.delete (`/sales/${params.detailId}`)
+      console.log (response);
+      navigate("/");
+
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <>
@@ -37,7 +49,7 @@ export function CarDetail() {
       <Link to={`/edit/${params.detailId}`}>
         <button>Edit</button>
       </Link>
-      <button>Delete</button>
+      <button onClick={handleDelete}>Delete</button>
     </>
   );
 }
