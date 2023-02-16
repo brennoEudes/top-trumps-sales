@@ -1,8 +1,8 @@
 import CardCar from "../../Components/CardCar/index";
-import Button from "../../Components/Button/index";
 import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 export function Home() {
   const [sales, setSales] = useState([]);
@@ -22,7 +22,7 @@ export function Home() {
   return (
     <>
       <Link to="/sales">
-        <Button text="Advertise My Car" />
+      <Button variant="success">Sell My Car</Button>{' '}
       </Link>
 
       {sales.map((currentSale) => {

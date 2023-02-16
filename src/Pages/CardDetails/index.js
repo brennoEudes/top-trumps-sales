@@ -34,10 +34,13 @@ export function CarDetail() {
 
   return (
     <>
+      <Link to="/">
+      <Button variant="outline-primary">Home</Button>{' '}
+      </Link>
       <div className="carInfo">
         <h1 className="cardInfoHeader">{detail.name}</h1>
         <div className="carInfoImage">
-        <img src={detail.image} alt={detail.name}/>
+          <img src={detail.image} alt={detail.name} />
         </div>
         <div className="carInfoFields">
           <p>{detail.description}</p>

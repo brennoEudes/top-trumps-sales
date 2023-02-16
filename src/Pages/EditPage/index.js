@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import Button from "../../Components/Button/index";
+import Button from 'react-bootstrap/Button';
 
 export function EditPage() {
   const [sale, setSale] = useState({
@@ -54,7 +54,7 @@ export function EditPage() {
   return (
     <>
       <Link to="/">
-        <Button text="Home" />
+      <Button variant="outline-primary">Home</Button>{' '}
       </Link>
 
       <h1>Editar Anúncio</h1>

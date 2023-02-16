@@ -42,7 +42,7 @@ export function CreateCar() {
   return (
     <>
       <Link to="/">
-      <Button variant="info">Home</Button>{' '}
+      <Button variant="outline-primary">Home</Button>{' '}
       </Link>
 
       <div className="createCarForm">
