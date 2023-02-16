@@ -42,10 +42,8 @@ export function CarDetail() {
           </Link>
         </div>
         <div className="carForm">
+        <img className="carInfoImage" src={detail.image} alt={detail.name} />
           <h1 className="formHeader">{detail.name}</h1>
-          <div className="carInfoImage">
-            <img src={detail.image} alt={detail.name} />
-          </div>
           <div className="carFields">
             <p>Description: {detail.description}</p>
             <p>Brand: {detail.brand}</p>

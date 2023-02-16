@@ -1,6 +1,15 @@
-.CardBox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    box-shadow: 0px 10px 20px -3px rgba(0,0,0,0.1);
+.cardsContainer {
+  display: inline-flexbox
+}
+
+.carMiniDescription {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 20px 20px;
+
+}
+
+.carPhoto {
+  max-width: 100%;
+  height: auto;
 }
