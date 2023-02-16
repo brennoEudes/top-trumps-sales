@@ -3,6 +3,7 @@ import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import NavBar from "../../Components/NavBar";
 
 export function Home() {
   const [sales, setSales] = useState([]);
@@ -21,9 +22,7 @@ export function Home() {
 
   return (
     <>
-      <Link to="/sales">
-      <Button variant="success">Sell My Car</Button>{' '}
-      </Link>
+      <NavBar />
 
       {sales.map((currentSale) => {
         return (
