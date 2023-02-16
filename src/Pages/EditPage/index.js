@@ -117,7 +117,9 @@ export function EditPage() {
             value={sale.fuel}
             onChange={handleChange}
           />
-          <label htmlFor="input-sale-aceleration">Accelerator time (0 to 100 km/h)</label>
+          <label htmlFor="input-sale-aceleration">
+            Accelerator time (0 to 100 km/h)
+          </label>
           <input
             id="input-sale-aceleration"
             type="number"
