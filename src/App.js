@@ -5,6 +5,10 @@ import { Home } from "./Pages/Home";
 import { CreateCar } from "./Pages/CreateCar";
 import { CarDetail } from "./Pages/CardDetails";
 import { EditPage } from "./Pages/EditPage";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "./App.css";
+
+
 
 function App() {
   return (

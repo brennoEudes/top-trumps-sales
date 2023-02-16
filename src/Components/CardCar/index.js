@@ -1,21 +1,22 @@
-import Button from "../Button";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import style from "../CardCar/style.modules.css"
 
-function Card(props) {
+function CardCar(props) {
   const { key, carPhoto, carName, carLink } = props;
 
   return (
     <>
-      <div>
+      <div className="CardBox">
         <img id={key} src={carPhoto} alt="car-icon" />
         <h2>{carName}</h2>
 
         <Link to={`/detail/${carLink}`}>
-          <Button text="Learn More" />
+        <Button variant="success">Learn More</Button>{' '}
         </Link>
       </div>
     </>
   );
 }
 
-export default Card;
+export default CardCar;

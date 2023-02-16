@@ -1,5 +1,5 @@
-import Card from "../../Components/Card";
-import Button from "../../Components/Button";
+import CardCar from "../../Components/CardCar/index";
+import Button from "../../Components/Button/index";
 import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -28,7 +28,7 @@ export function Home() {
       {sales.map((currentSale) => {
         return (
           <>
-            <Card
+            <CardCar
               key={currentSale.id}
               carPhoto={currentSale.attributes.image}
               carName={currentSale.attributes.name}
