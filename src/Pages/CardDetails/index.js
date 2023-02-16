@@ -58,7 +58,9 @@ export function CarDetail() {
                   "https://wa.me/5511943764418?text=Olá,%20tenho%20interesse%20em%20comprar%20um%20carro%20pelo%20Super%20Trumps%20Sales%20e%20gostaria%20de%20informações."
                 }
               >
-                <Button variant="success">Buy Now</Button>{" "}
+                 <Button variant="primary" size="lg">
+        Buy Now
+      </Button>
               </Link>
             </div>
             <Link to={`/edit/${params.detailId}`}>

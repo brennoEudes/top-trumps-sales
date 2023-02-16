@@ -4,10 +4,8 @@
 }
 
 body {
-  margin: auto;
   display: flex;
-  width: 600px;
-  height: 750px;
+  margin: auto;
   padding: 10px;
   font-family: Calibri;
   background-color: #f3f4f6;
