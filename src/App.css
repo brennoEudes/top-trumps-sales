@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: auto;
+  display: flex;
+  width: 600px;
+  height: 750px;
+  padding: 10px;
+  font-family: Calibri;
+  background-color: #f3f4f6;
+}

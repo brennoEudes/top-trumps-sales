@@ -1,0 +1,34 @@
+.carInfo {
+  display: flexbox;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 600px;
+  font-size: large;
+  margin: 10px 0px 10px 0px;
+}
+
+.cardInfoHeader {
+    padding: 2rem;
+    text-align: center;
+}
+
+.carInfoFields {
+    margin: 0px 30px 0px 30px;
+}
+
+.carInfoImage {
+    width: 600px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.btn-carInfo {
+    padding: 2rem;
+    text-align: center;
+}
+
+.btn-WhatsApp {
+    padding: 0.5rem;
+    text-align: center;
+}
