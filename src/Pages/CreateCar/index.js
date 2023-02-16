@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import style from "./style.modules.css";
 import Button from "react-bootstrap/Button";
+import CardInfo from "../../Components/CardInfo/style.modules.css";
 
 export function CreateCar() {
   const [sale, setSale] = useState({
@@ -49,10 +50,10 @@ export function CreateCar() {
           </Link>
         </div>
 
-        <div className="createCarForm">
+        <div className="carForm">
           <h1 className="formHeader">Create your car</h1>
 
-          <form className="createCarFields" onSubmit={handleSubmit}>
+          <form className="carFields" onSubmit={handleSubmit}>
             <label htmlFor="input-sale-name">Car name</label>
             <input
               id="input-sale-name"

@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { api } from "../../utils/api";
 import style from "./style.modules.css";
 import Button from "react-bootstrap/Button";
+import CardInfo from "../../Components/CardInfo/style.modules.css";
 
 export function CarDetail() {
   const params = useParams();
@@ -34,41 +35,47 @@ export function CarDetail() {
 
   return (
     <>
-      <Link to="/">
-      <Button variant="outline-primary">Home</Button>{' '}
-      </Link>
-      <div className="carInfo">
-        <h1 className="cardInfoHeader">{detail.name}</h1>
-        <div className="carInfoImage">
-          <img src={detail.image} alt={detail.name} />
+      <div className="container">
+        <div className="btn-home">
+          <Link to="/">
+            <Button variant="outline-primary">Home</Button>{" "}
+          </Link>
         </div>
-        <div className="carInfoFields">
-          <p>{detail.description}</p>
-          <p>{detail.brand}</p>
-          <p>{detail.year}</p>
-          <p>{detail.price}</p>
-          <p>{detail.aceleration}</p>
-          <p>{detail.fipe}</p>
-          <p>{detail.fuel}</p>
+        <div className="carForm">
+          <h1 className="formHeader">{detail.name}</h1>
+          <div className="carInfoImage">
+            <img src={detail.image} alt={detail.name} />
+          </div>
+          <div className="carFields">
+            <p>{detail.description}</p>
+            <p>{detail.brand}</p>
+            <p>{detail.year}</p>
+            <p>{detail.price}</p>
+            <p>{detail.aceleration}</p>
+            <p>{detail.fipe}</p>
+            <p>{detail.fuel}</p>
 
-          <div className="btn-carInfo">
-            <div className="btn-WhatsApp">
-              <Link
-                to={
-                  "https://wa.me/5511943764418?text=Olá,%20tenho%20interesse%20em%20comprar%20um%20carro%20pelo%20Super%20Trumps%20Sales%20e%20gostaria%20de%20informações."
-                }
-              >
-                 <Button variant="primary" size="lg">
-        Buy Now
-      </Button>
-              </Link>
+            <div className="btn-carInfo">
+              <div className="btn-WhatsApp">
+                <Link
+                  to={
+                    "https://wa.me/5511943764418?text=Olá,%20tenho%20interesse%20em%20comprar%20um%20carro%20pelo%20Super%20Trumps%20Sales%20e%20gostaria%20de%20informações."
+                  }
+                >
+                  <Button variant="primary" size="lg">
+                    Buy Now
+                  </Button>
+                </Link>
+              </div>
+              <div className="btn-editions">
+                <Link to={`/edit/${params.detailId}`}>
+                  <Button variant="warning">Edit</Button>{" "}
+                </Link>
+                <Button onClick={handleDelete} variant="danger">
+                  Delete
+                </Button>{" "}
+              </div>
             </div>
-            <Link to={`/edit/${params.detailId}`}>
-              <Button variant="warning">Edit</Button>{" "}
-            </Link>
-            <Button onClick={handleDelete} variant="danger">
-              Delete
-            </Button>{" "}
           </div>
         </div>
       </div>
