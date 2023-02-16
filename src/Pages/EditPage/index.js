@@ -67,13 +67,6 @@ export function EditPage() {
             value={sale.name}
             onChange={handleChange}
           />
-          <label htmlFor="input-sale-description">Description</label>
-          <input
-            id="input-sale-description"
-            name="description"
-            value={sale.description}
-            onChange={handleChange}
-          />
           <label htmlFor="input-sale-image">Image (link)</label>
           <input
             id="input-sale-image"
@@ -125,6 +118,13 @@ export function EditPage() {
             type="number"
             name="aceleration"
             value={sale.aceleration}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-description">Description</label>
+          <input
+            id="input-sale-description"
+            name="description"
+            value={sale.description}
             onChange={handleChange}
           />
           <div className="btn-carInfo">
