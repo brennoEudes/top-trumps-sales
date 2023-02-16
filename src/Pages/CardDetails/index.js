@@ -47,13 +47,13 @@ export function CarDetail() {
             <img src={detail.image} alt={detail.name} />
           </div>
           <div className="carFields">
-            <p>{detail.description}</p>
-            <p>{detail.brand}</p>
-            <p>{detail.year}</p>
-            <p>{detail.price}</p>
-            <p>{detail.aceleration}</p>
-            <p>{detail.fipe}</p>
-            <p>{detail.fuel}</p>
+            <p>Description: {detail.description}</p>
+            <p>Brand: {detail.brand}</p>
+            <p>Year: {detail.year}</p>
+            <p>Price: {detail.price}</p>
+            <p>Aceleration: {detail.aceleration}</p>
+            <p>Fipe: {detail.fipe}</p>
+            <p>Fuel: {detail.fuel}</p>
 
             <div className="btn-carInfo">
               <div className="btn-WhatsApp">
