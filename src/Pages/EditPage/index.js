@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 export function EditPage() {
   const [sale, setSale] = useState({
@@ -54,82 +54,84 @@ export function EditPage() {
   return (
     <>
       <Link to="/">
-      <Button variant="outline-primary">Home</Button>{' '}
+        <Button variant="outline-primary">Home</Button>{" "}
       </Link>
+      <div className="carInfo">
+        <h1 className="cardInfoHeader">Edit your car advertise</h1>
 
-      <h1>Editar Anúncio</h1>
-
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="input-sale-name">Car name</label>
-        <input
-          id="input-sale-name"
-          name="name"
-          value={sale.name}
-          onChange={handleChange}
-        />
-        <label htmlFor="input-sale-description">Description</label>
-        <input
-          id="input-sale-description"
-          name="description"
-          value={sale.description}
-          onChange={handleChange}
-        />
-        <label htmlFor="input-sale-image">image</label>
-        <input
-          id="input-sale-image"
-          name="image"
-          value={sale.image}
-          onChange={handleChange}
-        />
-        <label htmlFor="input-sale-brand">Brand</label>
-        <input
-          id="input-sale-brand"
-          name="brand"
-          value={sale.brand}
-          onChange={handleChange}
-        />
-        <label htmlFor="input-sale-price">Price</label>
-        <input
-          id="input-sale-price"
-          type="number"
-          name="price"
-          value={sale.price}
-          onChange={handleChange}
-        />
-        <label htmlFor="input-sale-fipe">Fipe</label>
-        <input
-          id="input-sale-fipe"
-          type="number"
-          name="fipe"
-          value={sale.fipe}
-          onChange={handleChange}
-        />
-        <label htmlFor="input-sale-year">Year</label>
-        <input
-          id="input-sale-year"
-          type="date"
-          name="year"
-          value={sale.year}
-          onChange={handleChange}
-        />
-        <label htmlFor="input-sale-fuel">Fuel</label>
-        <input
-          id="input-sale-fuel"
-          name="fuel"
-          value={sale.fuel}
-          onChange={handleChange}
-        />
-        <label htmlFor="input-sale-aceleration">Acelerator</label>
-        <input
-          id="input-sale-aceleration"
-          type="number"
-          name="aceleration"
-          value={sale.aceleration}
-          onChange={handleChange}
-        />
-
-        <button>Editar</button>
-      </form>
+        <form className="carInfoFields" onSubmit={handleSubmit}>
+          <label htmlFor="input-sale-name">Car name</label>
+          <input
+            id="input-sale-name"
+            name="name"
+            value={sale.name}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-description">Description</label>
+          <input
+            id="input-sale-description"
+            name="description"
+            value={sale.description}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-image">Image (link)</label>
+          <input
+            id="input-sale-image"
+            name="image"
+            value={sale.image}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-brand">Brand</label>
+          <input
+            id="input-sale-brand"
+            name="brand"
+            value={sale.brand}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-price">Price (R$)</label>
+          <input
+            id="input-sale-price"
+            type="number"
+            name="price"
+            value={sale.price}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-fipe">Fipe (R$)</label>
+          <input
+            id="input-sale-fipe"
+            type="number"
+            name="fipe"
+            value={sale.fipe}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-year">Year</label>
+          <input
+            id="input-sale-year"
+            type="date"
+            name="year"
+            value={sale.year}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-fuel">Fuel type</label>
+          <input
+            id="input-sale-fuel"
+            name="fuel"
+            value={sale.fuel}
+            onChange={handleChange}
+          />
+          <label htmlFor="input-sale-aceleration">Accelerator time (0 to 100 km/h)</label>
+          <input
+            id="input-sale-aceleration"
+            type="number"
+            name="aceleration"
+            value={sale.aceleration}
+            onChange={handleChange}
+          />
+          <div className="btn-carInfo">
+          <Button variant="success">Save</Button>{' '}
+          </div>
+        </form>
+      </div>
     </>
   );
 }
