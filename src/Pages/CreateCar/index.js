@@ -31,7 +31,8 @@ export function CreateCar() {
       e.preventDefault();
       let obj = { data: { ...sale } };
 
-      await api.post("/sales", obj);
+      const response = await api.post("/sales", obj);
+      console.log(response);
 
       navigate("/"); // navegar para a home
     } catch (err) {
@@ -122,7 +123,7 @@ export function CreateCar() {
               onChange={handleChange}
             />
             <div className="btn-publish">
-              <Button variant="primary" size="lg">
+              <Button type="submit" variant="primary" size="lg">
                 Publish
               </Button>
             </div>
