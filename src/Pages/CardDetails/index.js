@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { api } from "../../utils/api";
 import style from "./style.modules.css";
 import Button from "react-bootstrap/Button";
+import CardInfo from "../../Components/CardInfo/style.modules.css";
 
 export function CarDetail() {
   const params = useParams();
@@ -34,15 +35,18 @@ export function CarDetail() {
 
   return (
     <>
-      <Link to="/">
-      <Button variant="outline-primary">Home</Button>{' '}
-      </Link>
-      <div className="carInfo">
-        <h1 className="cardInfoHeader">{detail.name}</h1>
+    <div className="container">
+    <div className="btn-home">
+          <Link to="/">
+            <Button variant="outline-primary">Home</Button>{" "}
+          </Link>
+        </div>
+      <div className="carForm">
+        <h1 className="formHeader">{detail.name}</h1>
         <div className="carInfoImage">
           <img src={detail.image} alt={detail.name} />
         </div>
-        <div className="carInfoFields">
+        <div className="carFields">
           <p>{detail.description}</p>
           <p>{detail.brand}</p>
           <p>{detail.year}</p>
@@ -72,6 +76,7 @@ export function CarDetail() {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { api } from "../../utils/api";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import CardInfo from "../../Components/CardInfo/style.modules.css";
+import style from "./style.modules.css"
 
 export function EditPage() {
   const [sale, setSale] = useState({
@@ -53,13 +55,16 @@ export function EditPage() {
   }
   return (
     <>
-      <Link to="/">
-        <Button variant="outline-primary">Home</Button>{" "}
-      </Link>
-      <div className="carInfo">
-        <h1 className="cardInfoHeader">Edit your car advertise</h1>
+    <div className="container">
+ <div className="btn-home">
+          <Link to="/">
+            <Button variant="outline-primary">Home</Button>{" "}
+          </Link>
+        </div>
+      <div className="carForm">
+        <h1 className="formHeader">Edit your car advertisement</h1>
 
-        <form className="carInfoFields" onSubmit={handleSubmit}>
+        <form className="carFields" onSubmit={handleSubmit}>
           <label htmlFor="input-sale-name">Car name</label>
           <input
             id="input-sale-name"
@@ -127,11 +132,15 @@ export function EditPage() {
             value={sale.description}
             onChange={handleChange}
           />
-          <div className="btn-carInfo">
-          <Button variant="success">Save</Button>{' '}
+          <div className="btn-save">
+          <Button variant="primary" size="lg">
+                Save
+              </Button>
           </div>
         </form>
       </div>
+    </div>
+      
     </>
   );
 }
