@@ -9,26 +9,22 @@
 }
 
 .cardInfoHeader {
-    padding: 2rem;
-    text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .carInfoFields {
-    margin: 0px 30px 0px 30px;
-}
-
-.carInfoImage {
-    width: 600px;
-    height: 400px;
-    object-fit: contain;
+  margin: 30px 30px 0px 30px;
+  display: grid;
+  padding: 0px 0px 0px 0px;
 }
 
 .btn-carInfo {
-    padding: 2rem;
-    text-align: center;
+  padding: 2rem;
+  text-align: center;
 }
 
 .btn-WhatsApp {
-    padding: 0.5rem;
-    text-align: center;
+  padding: 0.5rem;
+  text-align: center;
 }

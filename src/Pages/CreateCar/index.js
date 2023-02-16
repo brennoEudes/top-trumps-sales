@@ -56,13 +56,6 @@ export function CreateCar() {
             value={sale.name}
             onChange={handleChange}
           />
-          <label htmlFor="input-sale-description">Description</label>
-          <input
-            id="input-sale-description"
-            name="description"
-            value={sale.description}
-            onChange={handleChange}
-          />
           <label htmlFor="input-sale-image">Image</label>
           <input
             id="input-sale-image"
@@ -116,8 +109,15 @@ export function CreateCar() {
             value={sale.aceleration}
             onChange={handleChange}
           />
+          <label htmlFor="input-sale-description">Description</label>
+          <input
+            id="input-sale-description"
+            name="description"
+            value={sale.description}
+            onChange={handleChange}
+          />
           <div className="btn-publishMyCar">
-            <Button variant="success">Publish My Car</Button>{" "}
+            <Button variant="success">Publish</Button>{" "}
           </div>
         </form>
       </div>
