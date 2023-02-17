@@ -2,7 +2,7 @@ import CardCar from "../../Components/CardCar/index";
 import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import NavBar from "../../Components/NavBar";
 
 export function Home() {
@@ -23,19 +23,20 @@ export function Home() {
   return (
     <>
       <NavBar />
-
-      {sales.map((currentSale) => {
-        return (
-          <>
-            <CardCar
-              key={currentSale.id}
-              carPhoto={currentSale.attributes.image}
-              carName={currentSale.attributes.name}
-              carLink={currentSale.id}
-            />
-          </>
-        );
-      })}
+      <div className="cardsContainer">
+        {sales.map((currentSale) => {
+          return (
+            <>
+              <CardCar
+                key={currentSale.id}
+                carPhoto={currentSale.attributes.image}
+                carName={currentSale.attributes.name}
+                carLink={currentSale.id}
+              />
+            </>
+          );
+        })}
+      </div>
     </>
   );
 }

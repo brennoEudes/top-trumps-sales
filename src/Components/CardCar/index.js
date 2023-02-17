@@ -8,7 +8,6 @@ function CardCar(props) {
 
   return (
     <>
-      <div className="cardsContainer">
         <div className="carForm">
           <img className="carPhoto" id={key} src={carPhoto} alt="car-icon" />
           <div className="carMiniDescription">
@@ -19,7 +18,6 @@ function CardCar(props) {
             </Link>
           </div>
         </div>
-      </div>
     </>
   );
 }
