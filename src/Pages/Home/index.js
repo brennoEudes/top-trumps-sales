@@ -2,7 +2,8 @@ import CardCar from "../../Components/CardCar/index";
 import { api } from "../../utils/api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
+import NavBar from "../../Components/NavBar";
 
 export function Home() {
   const [sales, setSales] = useState([]);
@@ -21,22 +22,21 @@ export function Home() {
 
   return (
     <>
-      <Link to="/sales">
-      <Button variant="success">Sell My Car</Button>{' '}
-      </Link>
-
-      {sales.map((currentSale) => {
-        return (
-          <>
-            <CardCar
-              key={currentSale.id}
-              carPhoto={currentSale.attributes.image}
-              carName={currentSale.attributes.name}
-              carLink={currentSale.id}
-            />
-          </>
-        );
-      })}
+      <NavBar />
+      <div className="cardsContainer">
+        {sales.map((currentSale) => {
+          return (
+            <>
+              <CardCar
+                key={currentSale.id}
+                carPhoto={currentSale.attributes.image}
+                carName={currentSale.attributes.name}
+                carLink={currentSale.id}
+              />
+            </>
+          );
+        })}
+      </div>
     </>
   );
 }
