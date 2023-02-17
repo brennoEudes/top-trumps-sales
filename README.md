@@ -2,7 +2,7 @@
 
 Inspired by the Top Trumps Game, this site was developed in order to practice the knowledge of the second module of the Ironhack bootcamp webdevelopment course.
 
-Developers: Pedro Henrique - Brenno Eudes
+Developers: Brenno Eudes and Pedro Henrique.
 
 **Top Trumps Car Sales**
 
@@ -12,4 +12,6 @@ Developers: Pedro Henrique - Brenno Eudes
 
 To enjoy and advertise your vehicle: [Click Here](https://super-trumps-sales.netlify.app/)
 
-To learn more about the project: [Click Here](https://docs.google.com/presentation/d/1ro5FoXMAy4YiQO0Z2ZEBr3W7afcMg2v11gnGBUv1RjE/edit#slide=id.p)
+See presentation: [Click Here](https://docs.google.com/presentation/d/1ro5FoXMAy4YiQO0Z2ZEBr3W7afcMg2v11gnGBUv1RjE/edit#slide=id.p)
+
+To learn more about the project, see the wireframe: [Click Here](https://miro.com/app/board/uXjVPnqAx_s=/)
